@@ -12,18 +12,18 @@
         "name": "TrioEats",
         "description": "WanderSEA is a tourism management system where user can see many places of inside and outside of the countries!",
         "technologies": ["React.js", "Express.js", "Node.js", "MongoDB", "TailwindCSS", "HTML5"],
-        "link": "https://wandersea-d210a.web.app/",
-        "server": "https://github.com/Mahbub049/wanderSEA-server.git",
-        "client": "https://github.com/Mahbub049/wanderSEA.git",
-        "image": "https://i.ibb.co/sHp1Xkd/wandersea.png"
+        "link": "https://trioeats-8ebfe.web.app/",
+        "server": "https://github.com/Mahbub049/trioeats-server.git",
+        "client": "https://github.com/Mahbub049/trioeats.git",
+        "image": "https://i.ibb.co/ZL9bsnK/trio.png"
     },
     {
         "name": "HostelMania",
         "description": "WanderSEA is a tourism management system where user can see many places of inside and outside of the countries!",
         "technologies": ["React.js", "Express.js", "Node.js", "MongoDB", "TailwindCSS", "HTML5"],
-        "link": "https://wandersea-d210a.web.app/",
-        "server": "https://github.com/Mahbub049/wanderSEA-server.git",
-        "client": "https://github.com/Mahbub049/wanderSEA.git",
-        "image": "https://i.ibb.co/sHp1Xkd/wandersea.png"
+        "link": "https://hostelmaniabd.web.app/",
+        "server": "https://github.com/Mahbub049/hostelmania-server.git",
+        "client": "https://github.com/Mahbub049/hostelmania.git",
+        "image": "https://i.ibb.co/WBHskH8/hostel.png"
     }
 ]
