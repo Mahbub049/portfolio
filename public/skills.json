@@ -1,0 +1,38 @@
+[
+    {
+        "image": "https://i.ibb.co/cYDb65C/React.webp",
+        "name": "React.js"
+    },
+    {
+        "image": "https://i.ibb.co/znG6Jmq/css.png",
+        "name": "Express.js"
+    },
+    {
+        "image": "https://i.ibb.co/mzvDPJ8/dbmongo.webp",
+        "name": "MongoDB"
+    },
+    {
+        "image": "https://i.ibb.co/FnkFk6y/node.png",
+        "name": "Node.js"
+    },
+    {
+        "image": "https://i.ibb.co/D5WGSHc/tailwind.png",
+        "name": "TailwindCSS"
+    },
+    {
+        "image": "https://i.ibb.co/BKNRC64/js.png",
+        "name": "Javascript"
+    },
+    {
+        "image": "https://i.ibb.co/ydY2CxC/boot.png",
+        "name": "Bootstrap"
+    },
+    {
+        "image": "https://i.ibb.co/w0wHdNM/html.png",
+        "name": "HTML5"
+    },
+    {
+        "image": "https://i.ibb.co/xC9XyJt/TS.webp",
+        "name": "Typescript"
+    }
+]

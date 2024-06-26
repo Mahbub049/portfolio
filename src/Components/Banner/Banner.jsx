@@ -1,81 +1,107 @@
-import { Button, Typography } from "@material-tailwind/react";
+import { Button, IconButton, Typography } from "@material-tailwind/react";
 import banner from "../../assets/banner.png";
 import { Typewriter } from "react-simple-typewriter";
 import { IoIosMail, IoLogoWhatsapp } from "react-icons/io";
-import { IoCall } from "react-icons/io5";
-import { FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
+import { IoCall, IoDocument } from "react-icons/io5";
+import { FaDownload, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ExampleDoc from "../../assets/webresume.pdf";
+import "./Banner.css";
+import SectionTitle from "../SectionTitle/SectionTitle";
+import { MdMail } from "react-icons/md";
+import { FcDocument } from "react-icons/fc";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+import MahbubSarwarResume from "../../assets/webresume.pdf";
+AOS.init();
 
 const Banner = () => {
   return (
-    <div className="ml-6 my-32 flex justify-between gap-8 min-h-full">
-      <div className="flex items-center flex-1">
-        <div>
-          <h1 className="font-bold text-6xl leading-[70px]">
-            I am{" "}
-            <span className="text-blue-600">Muhammad Mahbub Sarwar Shafi</span>
-          </h1>
-          <span> </span>
-          <h1
-            className="text-4xl"
-            style={{ paddingTop: "1rem", fontWeight: "normal" }}
-          >
-            I am{" "}
-            <span className="text-blue-400" style={{ fontWeight: "bold" }}>
-              {/* Style will be inherited from the parent element */}
-              <Typewriter
-                words={[
-                  "Jr. Web Developer",
-                  "Mern Stack Developer",
-                  "React.js Developer",
-                ]}
-                loop={5}
-                cursor
-                cursorStyle="_"
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={1000}
-              />
-            </span>
-          </h1>
-          <div className="mt-6 flex gap-10">
-            <div className="flex items-center font-medium gap-2 text-xl">
-              <IoIosMail className="text-2xl text-blue-600" />
-              <p>mahbubsarwar5@gmail.com</p>
-            </div>
-            <div className="flex items-center font-medium gap-2 text-xl">
-              <IoLogoWhatsapp className="text-2xl text-green-600" />
-              <p>+8801820909803</p>
-            </div>
+    <div id="about" className="ml-6 my-56 ">
+      <SectionTitle heading={"About Me"}></SectionTitle>
+      <div className="flex justify-between gap-8 min-h-full">
+        <div className="flex-1" data-aos="fade-right">
+          <img className="w-[600px] my-auto moveArrow" src={banner} alt="" />
+        </div>
+        <div className="flex justify-center flex-col flex-1 space-y-6" data-aos="fade-left">
+          <div className="space-y-4">
+            <h4 className="text-lg text-blue-400 font-semibold">
+              Name:{" "}
+              <span className="text-white">Muhammad Mahbub Sarwar Shafi</span>
+            </h4>
+            <h4 className="text-lg text-blue-400 font-semibold">
+              Graduate:{" "}
+              <span className="text-white">
+                B.Sc in Information and Communication Engineering
+              </span>
+            </h4>
+            <h4 className="text-lg text-blue-400 font-semibold">
+              Expertise:{" "}
+              <span className="text-white">MERN Stack Web Development</span>
+            </h4>
           </div>
-          <div className="mt-8 flex gap-4">
-            <a href={ExampleDoc} download="MyExampleDoc" target="_blank">
-              <Button className="py-4 bg-blue-500 hover:bg-blue-800 flex gap-2 items-center">
-                <FaDownload className="text-lg"></FaDownload>Download Resume
-              </Button>
+          <div className="flex gap-8">
+            <h4 className="text-lg flex items-center gap-2 text-blue-400 font-semibold">
+              <IoIosMail className="text-3xl"></IoIosMail>
+              <span className="text-white">mahbubsarwar5@gmail.com</span>
+            </h4>
+            <h4 className="text-lg flex items-center gap-2 text-green-600 font-semibold">
+              <IoLogoWhatsapp className="text-3xl"></IoLogoWhatsapp>
+              <span className="text-white">+8801820909803</span>
+            </h4>
+          </div>
+          <p className="text-justify">
+            Hi there! I&apos;m Muhammad Mahbub Sarwar Shafi, a dedicated MERN
+            Stack web developer with a flair for crafting seamless and efficient
+            web applications. I specialize in building robust full-stack
+            solutions that are both scalable and user-friendly. With expertise
+            in MongoDB, Express.js, React, and Node.js, I transform innovative
+            ideas into dynamic web experiences.
+          </p>
+          <div className="flex gap-4">
+            <Link to={"https://www.linkedin.com/in/mahbubsarwar49/"}>
+              <IconButton
+                size="lg"
+                variant="outlined"
+                className="text-[#4690ff] text-2xl border-[#4690ff] rounded-full hover:bg-opacity-80 transform hover:bg-blue-700 hover:text-white hover:border-blue-800 transition duration-500"
+              >
+                <FaLinkedin className=""></FaLinkedin>
+              </IconButton>
+            </Link>
+            <Link to={"https://github.com/Mahbub049"}>
+              <IconButton
+                size="lg"
+                variant="outlined"
+                className="text-[#4690ff] text-2xl border-[#4690ff] rounded-full hover:bg-opacity-80 border-2   transform hover:bg-blue-700 hover:text-white hover:border-blue-800 transition duration-500"
+              >
+                <FaGithub className=""></FaGithub>
+              </IconButton>
+            </Link>
+            <Link to={"https://www.facebook.com/mahbub.sarwar46"}>
+              <IconButton
+                size="lg"
+                variant="outlined"
+                className="text-[#4690ff] text-2xl border-[#4690ff] rounded-full hover:bg-opacity-80 transform hover:bg-blue-700 hover:text-white hover:border-blue-800 transition duration-500"
+              >
+                <FaFacebook className=""></FaFacebook>
+              </IconButton>
+            </Link>
+            <a
+              href={MahbubSarwarResume}
+              download="MahbubSarwarResume"
+              target="_blank"
+            >
+              <IconButton
+                size="lg"
+                variant="outlined"
+                className="text-[#4690ff] text-2xl border-[#4690ff] rounded-full hover:bg-opacity-80 transform hover:bg-blue-700 hover:text-white hover:border-blue-800 transition duration-500"
+              >
+                <IoDocument className=""></IoDocument>
+              </IconButton>
             </a>
-            <Link to="https://github.com/mahbub049/">
-              <Button
-                variant="outlined"
-                className="flex items-center border-blue-500 hover:bg-blue-700 hover:text-white gap-3 text-[14px]"
-              >
-                <FaGithub className="text-xl"></FaGithub> Github
-              </Button>
-            </Link>
-            <Link to="https://www.linkedin.com/in/mahbubsarwar49/">
-              <Button
-                variant="outlined"
-                className="flex items-center border-blue-500 hover:bg-blue-700 hover:text-white gap-3 text-[14px]"
-              >
-                <FaLinkedin className="text-xl"></FaLinkedin> LinkedIn
-              </Button>
-            </Link>
           </div>
         </div>
-      </div>
-      <div className="flex-1">
-        <img className="w-[600px] my-auto" src={banner} alt="" />
       </div>
     </div>
   );

@@ -8,58 +8,46 @@ import {
   Tooltip,
   IconButton,
 } from "@material-tailwind/react";
+import { FaEye } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const ProjectCard = ({ project }) => {
   const { name, image, server, client, technologies, description, link } =
     project;
   return (
-    <Card className="w-full max-w-[26rem] shadow-lg">
+    <Card data-aos="fade-up" className="bg-transparent text-white w-full max-w-[26rem] shadow-lg">
       <CardHeader floated={false} color="blue-gray">
-        <img src={image} alt="ui/ux review check" />
+        <img className="transform hover:scale-110 transition duration-700" src={image} alt="ui/ux review check" />
         <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
       </CardHeader>
       <CardBody>
-        <div className="mb-3 flex items-center justify-between">
-          <Typography variant="h5" color="blue-gray" className="font-medium">
+        <div className="flex items-center justify-between">
+          <Typography
+            variant="h5"
+            color="blue-gray"
+            className="text-white font-medium"
+          >
             {name}
           </Typography>
-        </div>
-        <Typography color="gray" className="mb-4">
-          {description}
-        </Typography>
-        <div className="grid grid-cols-3">
-          {technologies.map((item, idx) => (
-            <p
-              key={idx}
-              className="my-2 mx-1 text-[14px] border-2 border-blue-600 rounded-full text-center "
-            >
-              {item}
-            </p>
-          ))}
+          <div className="flex gap-1">
+            <Link to={link} className="w-full">
+              <Button size="sm" color="blue" className="flex gap-1 items-center" fullWidth={true}>
+                <FaEye></FaEye> View
+              </Button>
+            </Link>
+            <Link to={server} className="w-full">
+              <Button size="sm" color="blue" fullWidth={true}>
+                Server
+              </Button>
+            </Link>
+            <Link to={client} className="w-full">
+              <Button size="sm" color="blue" fullWidth={true}>
+                Client
+              </Button>
+            </Link>
+          </div>
         </div>
       </CardBody>
-      <CardFooter className="pt-2">
-        <div className="mb-4">
-          <Link to={link}>
-            <Button size="lg" fullWidth={true}>
-              Visit Website
-            </Button>
-          </Link>
-        </div>
-        <div className="flex gap-4 mb-4">
-          <Link to={server} className="w-full" >
-            <Button size="lg" fullWidth={true}>
-              Server Side
-            </Button>
-          </Link>
-          <Link to={client} className="w-full" >
-            <Button size="lg" fullWidth={true}>
-              Client Side
-            </Button>
-          </Link>
-        </div>
-      </CardFooter>
     </Card>
   );
 };

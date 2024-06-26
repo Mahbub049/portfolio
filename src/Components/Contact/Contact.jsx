@@ -16,23 +16,23 @@ const Contact = () => {
       <SectionTitle heading={"Contact Me"}></SectionTitle>
       <div className="flex gap-10 mt-12">
         <div className="flex-1">
-          <div className="px-8 py-12 border-blue-500 border-2 rounded-xl mb-3 space-y-2 border">
+          <div data-aos="fade-down" className="px-8 py-12 border-blue-500 border-2 rounded-xl mb-3 space-y-2 border">
             <FaWhatsapp className="text-2xl text-green-500" />
             <p className="font-bold text-blue-600">WhatsApp</p>
             <p>+8801820909803</p>
           </div>
-          <div className="px-8 py-12 border-blue-500 border-2 rounded-xl mb-3 space-y-2 border">
+          <div data-aos="fade-down" data-aos-delay="50" className="px-8 py-12 border-blue-500 border-2 rounded-xl mb-3 space-y-2 border">
             <MdEmail className="text-2xl text-[#ff6961]" />
             <p className="font-bold text-blue-600">Email</p>
             <p>mahbubsarwar5@gmail.com</p>
           </div>
-          <div className="px-8 py-12 border-blue-500 border-2 rounded-xl mb-3 space-y-2 border">
+          <div data-aos="fade-down" data-aos-delay="100" className="px-8 py-12 border-blue-500 border-2 rounded-xl mb-3 space-y-2 border">
             <GrLocation className="text-2xl text-blue-500"></GrLocation>
             <p className="font-bold text-blue-600">Address</p>
             <p>144/11, Matikata, Dhaka, Bangladesh</p>
           </div>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 " data-aos="fade-left" data-aos-delay="150">
           <div className="mb-6">
             <p className="text-lg font-bold mb-3">Your Name</p>
             <input
