@@ -14,7 +14,7 @@ const Contact = () => {
   return (
     <div className="my-32" id="contact">
       <SectionTitle heading={"Contact Me"}></SectionTitle>
-      <div className="flex gap-10 mt-12">
+      <div className="flex flex-col mx-3 lg:flex-row gap-10 mt-12">
         <div className="flex-1">
           <div data-aos="fade-down" className="px-8 py-12 border-blue-500 border-2 rounded-xl mb-3 space-y-2 border">
             <FaWhatsapp className="text-2xl text-green-500" />

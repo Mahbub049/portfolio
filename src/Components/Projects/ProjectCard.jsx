@@ -21,7 +21,7 @@ const ProjectCard = ({ project }) => {
         <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
       </CardHeader>
       <CardBody>
-        <div className="flex items-center justify-between">
+        <div className="lg:flex items-center justify-between">
           <Typography
             variant="h5"
             color="blue-gray"
@@ -29,7 +29,7 @@ const ProjectCard = ({ project }) => {
           >
             {name}
           </Typography>
-          <div className="flex gap-1">
+          <div className="flex mt-3 lg:mt-0 gap-1">
             <Link to={link} className="w-full">
               <Button size="sm" color="blue" className="flex gap-1 items-center" fullWidth={true}>
                 <FaEye></FaEye> View

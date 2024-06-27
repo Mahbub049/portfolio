@@ -76,7 +76,7 @@ export function StickyNavbar() {
 
   return (
     <div className="my-6 w-[calc(100%+48px)] mons">
-      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 bg-transparent backdrop-blur-none backdrop-saturate-0 border-none">
+      <Navbar className="sticky top-0 z-10 h-max lg:max-w-full rounded-none lg:px-4 py-2 lg:px-8 lg:py-4 bg-transparent backdrop-blur-none backdrop-saturate-0 border-none">
         <div className="flex items-center justify-between">
           <Typography
             as="a"

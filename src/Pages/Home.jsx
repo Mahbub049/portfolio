@@ -7,17 +7,19 @@ import Skills from "../Components/Skills/Skills";
 import TopBanner from "../Components/TopBanner/TopBanner";
 
 const Home = () => {
-    return (
-        <div className="container mx-auto mons">
-            <StickyNavbar></StickyNavbar>
-            <TopBanner></TopBanner>
-            <Banner></Banner>
-            <Skills></Skills>
-            <Projects></Projects>
-            <Contact></Contact>
-            <Footer></Footer>
-        </div>
-    );
+  return (
+    <div className="container mx-auto mons">
+      <div className="mx-2 mr-12">
+        <StickyNavbar></StickyNavbar>
+      </div>
+      <TopBanner></TopBanner>
+      <Banner></Banner>
+      <Skills></Skills>
+      <Projects></Projects>
+      <Contact></Contact>
+      <Footer></Footer>
+    </div>
+  );
 };
 
 export default Home;

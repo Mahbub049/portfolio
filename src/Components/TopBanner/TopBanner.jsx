@@ -10,7 +10,7 @@ import "./TopBanner.css";
 
 const TopBanner = () => {
   return (
-    <div className="ml-6 my-56 flex justify-between gap-8 min-h-full">
+    <div className="ml-6 my-16 lg:my-56 flex flex-col md:flex-row justify-between gap-8 min-h-full">
       <div data-aos="fade-down" data-aos-delay="100" className="flex items-center flex-1">
         <div>
           <h1

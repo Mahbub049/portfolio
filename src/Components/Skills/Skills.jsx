@@ -13,7 +13,7 @@ const Skills = () => {
   return (
     <div className="mb-32" id="skills">
       <SectionTitle heading="My Skills"></SectionTitle>
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid grid-cols-2 mx-2 lg:mx-0 lg:grid-cols-3 gap-8">
         {skills.map((skill, idx) => (
           <div
             data-aos="fade-right"
