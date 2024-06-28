@@ -11,7 +11,7 @@ import "./TopBanner.css";
 const TopBanner = () => {
   return (
     <div className="ml-6 my-16 md:my-0 lg:my-56 flex flex-col md:flex-col-reverse lg:flex-row justify-between gap-8 min-h-full">
-      <div data-aos="fade-down" data-aos-delay="100" className="flex items-center md:text-center flex-1">
+      <div data-aos="fade-down" data-aos-delay="100" className="flex items-center lg:text-start md:text-center flex-1">
         <div>
           <h1
             className="text-6xl md:text-4xl lg:text-6xl leading-[70px]"
@@ -38,7 +38,7 @@ const TopBanner = () => {
             advanced MERN stack expertise, I can deliver exceptional digital
             experiences tailored to your needs.
           </p>
-          <div className="mt-8 flex md:justify-center gap-4">
+          <div className="mt-8 flex md:justify-center lg:justify-start gap-4">
             <a href="#contact">
               <Button className="py-4 text-white hover:text-white bg-[#0D6EFD] hover:bg-[#0d6dfdb0] flex gap-2 items-center">
                 <FaArrowRight className="text-lg"></FaArrowRight>Get Started

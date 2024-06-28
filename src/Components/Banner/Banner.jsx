@@ -21,10 +21,10 @@ const Banner = () => {
     <div id="about" className="md:ml-6 my-24 lg:my-56 ">
       <SectionTitle heading={"About Me"}></SectionTitle>
       <div className="flex flex-col lg:flex-row justify-between gap-8 min-h-full">
-        <div className="flex-1 md:flex md:justify-center lg:ml-0" data-aos="fade-right">
+        <div className="flex-1 md:flex md:justify-center lg:justify-start lg:ml-0" data-aos="fade-right">
           <img className="w-[600px] my-auto moveArrow" src={banner} alt="" />
         </div>
-        <div className="flex justify-center p-4 flex-col flex-1 md:text-center space-y-6" data-aos="fade-left">
+        <div className="flex justify-center p-4 flex-col flex-1 md:text-center lg:text-start space-y-6" data-aos="fade-left">
           <div className="space-y-4">
             <h4 className="text-lg text-blue-400 font-semibold">
               Name:{" "}
@@ -41,7 +41,7 @@ const Banner = () => {
               <span className="text-white">MERN Stack Web Development</span>
             </h4>
           </div>
-          <div className="flex md:justify-center flex-col md:flex-row gap-4 lg:gap-8">
+          <div className="flex md:justify-center lg:justify-start flex-col md:flex-row gap-4 lg:gap-8">
             <h4 className="text-lg flex items-center gap-2 text-blue-400 font-semibold">
               <IoIosMail className="text-3xl"></IoIosMail>
               <span className="text-white">mahbubsarwar5@gmail.com</span>
