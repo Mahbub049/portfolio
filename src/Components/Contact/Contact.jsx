@@ -1,44 +1,70 @@
-import {
-  Card,
-  Input,
-  Checkbox,
-  Button,
-  Typography,
-} from "@material-tailwind/react";
+// import {
+//   Card,
+//   Input,
+//   Checkbox,
+//   Button,
+//   Typography,
+// } from "@material-tailwind/react";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { GrLocation } from "react-icons/gr";
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import { useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
+  const form = useRef();
 
-  const onSubmit = (data) => {
-    fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        Swal.fire({
-          title: "Success!",
-          text: "Successfully Sent!",
-          icon: "success",
-          confirmButtonText: "Okay",
-        });
-        e.target.reset();
-      });
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_i614clf', 'template_4wtgvgr', form.current, {
+        publicKey: 'cJUXYyqCGCkhq5pJp',
+      })
+      .then(
+        () => {
+          e.target.reset();
+          Swal.fire({
+                    title: "Success!",
+                    text: "Successfully Sent!",
+                    icon: "success",
+                    confirmButtonText: "Okay",
+                  });
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
   };
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   watch,
+  //   formState: { errors },
+  // } = useForm();
+
+  // const onSubmit = (data) => {
+  //   fetch("http://localhost:5000/contact", {
+  //     method: "POST",
+  //     headers: {
+  //       "content-type": "application/json",
+  //     },
+  //     body: JSON.stringify(data),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       Swal.fire({
+  //         title: "Success!",
+  //         text: "Successfully Sent!",
+  //         icon: "success",
+  //         confirmButtonText: "Okay",
+  //       });
+  //       e.target.reset();
+  //     });
+  // };
   return (
     <div className="my-32" id="contact">
       <SectionTitle heading={"Contact Me"}></SectionTitle>
@@ -71,13 +97,13 @@ const Contact = () => {
             <p>144/11, Matikata, Dhaka, Bangladesh</p>
           </div>
         </div>
-        <form className="flex-1 " onSubmit={handleSubmit(onSubmit)}>
+        <form className="flex-1 " ref={form} onSubmit={sendEmail}>
           <div data-aos="fade-left" data-aos-delay="150">
             <div className="mb-6">
               <p className="text-lg font-bold mb-3">Your Name</p>
               <input
                 type="text"
-                {...register("name")}
+                name="user_name"
                 className="border pl-3 border-blue-500 rounded-xl h-[40px] w-full"
               />
             </div>
@@ -85,7 +111,7 @@ const Contact = () => {
               <p className="text-lg font-bold mb-3">Your Email</p>
               <input
                 type="text"
-                {...register("email")}
+                name="user_email"
                 className="border pl-3 border-blue-500 rounded-xl h-[40px] w-full"
               />
             </div>
@@ -98,7 +124,6 @@ const Contact = () => {
               <textarea
                 rows="11"
                 className="border p-3 h-[250px] border-blue-500 rounded-xl w-full"
-                {...register("message")}
                 name="message"
                 id=""
               />
