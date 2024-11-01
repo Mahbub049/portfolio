@@ -12,6 +12,7 @@ const Home = () => {
       <div className="mx-2 mr-12">
         <StickyNavbar></StickyNavbar>
       </div>
+      {/* This is top banner */}
       <TopBanner></TopBanner>
       <Banner></Banner>
       <Skills></Skills>
